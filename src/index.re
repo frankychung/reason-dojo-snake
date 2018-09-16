@@ -1,11 +1,29 @@
 open Reprocessing;
 
-let setup = (env) => Env.size(~width=600, ~height=600, env);
+let stepSize = 10;
 
-let draw = (_state, env) => {
-  Draw.background(Utils.color(~r=199, ~g=217, ~b=229, ~a=255), env);
-  Draw.fill(Utils.color(~r=41, ~g=166, ~b=244, ~a=255), env);
-  Draw.rect(~pos=(150, 150), ~width=300, ~height=300, env)
+type state = {position: (int, int)};
+
+let setup = env => {
+  Env.size(~width=500, ~height=500, env);
+  {position: (50, 50)};
 };
 
-run(~setup, ~draw, ());
+let draw = (state, env) => {
+  Draw.background(Constants.white, env);
+  Draw.fill(Constants.black, env);
+  Draw.rect(~pos=state.position, ~width=10, ~height=10, env);
+  state;
+};
+
+let keyPressed = ( state, env ) => {
+  let (posX, posY) = state.position;
+  let position =
+    switch (Env.keyCode(env)) {
+    | Down => (posX, posY + stepSize);
+    | _ => state.position
+    };
+  {position: position};
+};
+
+run(~setup, ~draw, ~keyPressed, ());
