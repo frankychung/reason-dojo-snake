@@ -2,8 +2,10 @@
 
 Snake!
 
+* Arrow keys to change direction
 * Game over if you run into the wall or your own tail
 * Put an apple somewhere on the map and eat them to grow longer lol
+* Press space to pause or start over from game over state
 
 We'll be using Reprocessing. Check out the docs here:
 https://schmavery.github.io/reprocessing/index.html
