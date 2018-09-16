@@ -1,19 +1,16 @@
-Reprocessing Example
+Reason Dojo 2018-09-16
 ---
 
-Clone this repo to get started with [Reprocessing](https://github.com/schmavery/reprocessing).
+Snake!
 
-Demos are on other branches:
+We'll be using Reprocessing. Check out the docs here: 
+https://schmavery.github.io/reprocessing/index.html
 
-- [Flappy Bird](https://github.com/bsansouci/reprocessing-example/tree/livestream-flappybird)
-- [2048](https://github.com/bsansouci/reprocessing-example/tree/2048)
+Some useful stuff you'll probably want to use:
+- https://schmavery.github.io/reprocessing/api/Reprocessing_Env.html#value-deltaTime
 
-...and more on the [Reprocessing repo](https://github.com/schmavery/reprocessing#projects-using-reprocessing).
-
-## How to
-```
-git clone https://github.com/bsansouci/reprocessing-example.git
-```
+Reason API:
+https://reasonml.github.io/api/index
 
 ### Install
 
@@ -36,3 +33,5 @@ To build to JS run `npm run build:web` and then run a static server, like `pytho
 To build to native run `npm run build:native` and run `npm run start:native`
 
 The build system used is [bsb-native](https://github.com/bsansouci/bsb-native).
+
+Forked from https://github.com/bsansouci/reprocessing-example

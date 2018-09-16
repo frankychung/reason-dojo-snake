@@ -16,11 +16,11 @@ let draw = (state, env) => {
   state;
 };
 
-let keyPressed = ( state, env ) => {
+let keyPressed = (state, env) => {
   let (posX, posY) = state.position;
   let position =
     switch (Env.keyCode(env)) {
-    | Down => (posX, posY + stepSize);
+    | Down => (posX, posY + stepSize)
     | _ => state.position
     };
   {position: position};
