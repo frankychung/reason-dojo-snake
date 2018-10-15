@@ -1,5 +1,3 @@
-## Reason Dojo 2018-09-16
-
 Snake!
 
 * Arrow keys to change direction
